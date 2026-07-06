@@ -95,5 +95,14 @@ Tested: COAIUSDT, LABUSDT, PIPPINUSDT, HUSDT, BEATUSDT
 - HUSDT: only 811 USDT depth — too thin
 - No pass/fail yet — need leverage info from UI to set order size
 
+### Step A — cryptohftdata.com Exploration (2026-07-06)
+- **Aster order book history confirmed** — 538 symbols, incremental L2 data
+- API: `api.cryptohftdata.com` (needs API key, saved on Azure ~/.env)
+- **No snapshot-at-timestamp endpoint** — must download full hourly parquet files
+- File format: `.parquet.zst`, columns: received_time(ns), event_time(ms), side, price, qty
+- Each row = one price level update (incremental L2), ~352k rows/hour for BTCUSDT
+- File sizes: LABUSDT 2MB/hr, others 49KB-500KB/hr
+- **Smart subset needed**: only download hours with qualifying settlements
+
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
