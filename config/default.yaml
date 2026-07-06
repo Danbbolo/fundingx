@@ -1,0 +1,16 @@
+# FundingX — Default Strategy Configuration
+mode: paper           # paper | live
+log_level: INFO
+
+exchange:
+  name: binance
+  testnet: true       # set to false for live trading
+
+strategy:
+  min_funding_rate: 0.0005     # 0.05% minimum rate to trigger
+  max_position_size: 1000.0    # max notional per position in USDT
+  symbols:
+    - BTC/USDT
+    - ETH/USDT
+    - SOL/USDT
+  check_interval_seconds: 60

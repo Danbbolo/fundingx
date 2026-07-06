@@ -1,0 +1,65 @@
+# Azure DevOps Pipeline — Build & Deploy fundingx
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  azureServiceConnection: 'fundingx-azure-connection'
+  acrName: 'fundingxregistry'
+  resourceGroup: 'fundingx-rg'
+  containerName: 'fundingx'
+  imageName: 'fundingx'
+
+stages:
+  - stage: Build
+    displayName: 'Build & Push Docker Image'
+    jobs:
+      - job: BuildJob
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - task: Docker@2
+            displayName: 'Build Docker image'
+            inputs:
+              command: build
+              repository: $(imageName)
+              Dockerfile: Dockerfile
+              tags: |
+                $(Build.BuildId)
+                latest
+
+          - task: Docker@2
+            displayName: 'Push to ACR'
+            inputs:
+              command: push
+              containerRegistry: $(azureServiceConnection)
+              repository: $(acrName)
+              tags: |
+                $(Build.BuildId)
+                latest
+
+  - stage: Deploy
+    displayName: 'Deploy to Azure Container Instances'
+    dependsOn: Build
+    jobs:
+      - deployment: DeployJob
+        environment: 'production'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: AzureCLI@2
+                  displayName: 'Deploy container'
+                  inputs:
+                    azureSubscription: $(azureServiceConnection)
+                    scriptType: bash
+                    scriptLocation: inlineScript
+                    inlineScript: |
+                      az container create \
+                        --resource-group $(resourceGroup) \
+                        --name $(containerName) \
+                        --image $(acrName).azurecr.io/$(imageName):$(Build.BuildId) \
+                        --cpu 1 --memory 1 \
+                        --restart-policy Always \
+                        --location eastus
