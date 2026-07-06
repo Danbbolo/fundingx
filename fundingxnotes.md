@@ -52,5 +52,32 @@ Started: July 6, 2026
 - No interval scaling — fees are per-trade regardless of funding interval
 - A funding rate must have |rate| >= 0.0024 to qualify
 
+### Step 2 — Full Scan (2026-07-06)
+- Scanned 500 USDT perpetuals on Aster Pro mode
+- Raw data: step2_scan_results.csv
+- **TOP 15 by avg 7-day qualifying frequency:**
+
+| Symbol | Int | Events | Qual | Favg | Red flag? |
+|--------|-----|--------|------|------|-----------|
+| HOMEUSDT | 1h | 1089 | 155 | 24.0 | ⚠️ Only 1089 events, 14% qualify — investigate raw rates |
+| TAIKOUSDT | 1h | 109 | 23 | 20.0 | ⚠️ Only 109 events — tiny sample, unreliable |
+| COAIUSDT | 1h | 2000 | 181 | 15.3 | Check if rates repeat at same value |
+| LABUSDT | 1h | 2000 | 191 | 14.6 | Check raw |
+| PIPPINUSDT | 1h | 2000 | 157 | 12.3 | |
+| HUSDT | 1h | 2000 | 84 | 7.1 | |
+| BEATUSDT | 1h | 2000 | 93 | 6.1 | |
+| BIRBUSDT | 1h | 2000 | 70 | 5.8 | |
+| AIAUSDT | 1h | 2000 | 80 | 5.5 | |
+| ARXUSDT | 1h | 322 | 10 | 5.2 | ⚠️ Only 322 events |
+| FIDAUSDT | 1h | 1158 | 33 | 4.8 | |
+| TNSRUSDT | 1h | 2000 | 51 | 4.3 | |
+| ENJUSDT | 1h | 2000 | 51 | 4.2 | |
+| REUSDT | 1h | 419 | 10 | 4.0 | ⚠️ Only 419 events |
+| SLXUSDT | 1h | 821 | 32 | 4.0 | |
+
+- All top coins are 1h interval
+- BTC/ETH/SOL/DOGE = 0 qualifying (majors have tiny funding)
+- 0.24% threshold filters out ~85% of all coins
+
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
