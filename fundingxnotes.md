@@ -339,6 +339,35 @@ Fixed version with all 149 files loaded shows **DRAMATICALLY different results:*
 | Avg exit slip | 0.073% | 0.084% | +0.01% |
 | Win% | 23.6% | 23.6% | 0% |
 
+### KLINE VERIFICATION (2026-07-06) — Independent proof via Aster's own candles
+Source: `fapi.asterdex.com/fapi/v1/klines` (1m candles). NOT cryptohftdata.
+
+**10 specific settlements:**
+| Settlement | Rate% | T-1min | T+1min | Dir |
+|------------|-------|--------|--------|-----|
+| Jun 24 12:00 | -0.31 | 16.571 | 16.662 | UP |
+| Jun 24 16:00 | -1.06 | 18.954 | 18.708 | DOWN |
+| Jun 26 08:00 | -0.30 | 18.018 | 18.006 | DOWN |
+| Jun 27 17:00 | -0.67 | 15.738 | 15.508 | DOWN |
+| Jun 28 01:00 | -0.35 | 17.061 | 17.073 | UP |
+| Jun 29 09:00 | -0.40 | 14.801 | 14.806 | UP |
+| Jun 30 08:00 | -0.85 | 12.977 | 12.951 | DOWN |
+| Jul 02 21:00 | -0.71 | 10.662 | 10.674 | UP |
+| Jul 03 02:00 | -1.10 | 10.840 | 10.655 | DOWN |
+| Jul 03 11:00 | -0.25 | 7.302 | 7.260 | DOWN |
+
+**All 123 settlements:**
+- Price UP at T+1min: **38 (30.9%)**
+- Price DOWN at T+1min: **85 (69.1%)**
+- Avg change UP: +0.65% | Avg change DOWN: -0.78%
+
+**The kill shot:**
+- Backtest v3 claimed: 63.4% win rate ← **WRONG** (cache bug)
+- Kline reality: 30.9% UP rate ← **INDEPENDENTLY CONFIRMED**
+- Exit comparison v2: -€3,288 net ← **CORRECT**
+
+**Final conclusion: LABUSDT price drops 69% of the time after settlement. We go LONG (negative rate = longs receive), collecting funding but bleeding on price. The v3 backtest was fabricated by cache eviction. Strategy is net negative.**
+
 **CRITICAL: Both versions LOSE MONEY.** The v3 backtest (+€3,991) was wrong — cache eviction bug.
 - Price moves AGAINST the position after settlement (LABUSDT is always LONG, price drops)
 - Funding (+€3,017) cannot overcome price loss (-€5,152 at T+1min, -€3,911 at T+10s)
