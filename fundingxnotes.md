@@ -7,6 +7,7 @@ Started: July 6, 2026
 - **SSH key**: Desktop/arb_key.pem
 - **Python**: 3.12.3 on Azure box
 - **Local dev**: Windows, Python 3.11+, workspace at c:\Users\User\fundingx
+- **GitHub**: https://github.com/Danbbolo/fundingx (branch: master)
 
 ## Strategy Summary
 - DEX funding fee sniper on **Aster DEX** (asterdex.com) — Pro mode / orderbook perps ONLY
