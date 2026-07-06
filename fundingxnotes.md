@@ -174,7 +174,49 @@ Book depth at 4 lead times before 123 qualifying settlements:
 | Jun 29 11:00 | -0.62% | $5,974 | $2,021 | **$599** | $4,523 |
 | Jun 24 17:00 | -0.57% | $4,403 | $5,228 | **$733** | $505 |
 
-**Key insight:** Books collapse at T-5min specifically — they are 5-10x deeper at T-30/T-15 and often recover at T-1. T-5 is the worst moment. **Best entry: T-15min or T-1min, NOT T-5.**
+**Key insight (since corrected):** Initial claim was T-5 collapse. **Selection bias check revealed: minimum depth is spread evenly across all 4 lead times (T-30: 27.6%, T-15: 27.6%, T-5: 23.6%, T-1: 21.1%). Timing doesn't matter — depth is just noisy.**
+
+### Selection Bias Check (2026-07-06)
+For each of 123 LABUSDT settlements, found which lead time had MINIMUM depth:
+T-30: 34 (27.6%) | T-15: 34 (27.6%) | T-5: 29 (23.6%) | T-1: 26 (21.1%)
+**Near-uniform distribution. No special T-5 collapse. Timing doesn't affect depth.**
+
+### Step D — Backtest Simulation (2026-07-06)
+Walked historical order books at T-1min entry / T+1min exit for 4 coins over 14 days.
+Entry: market order walking top 20 levels. Exit: same. Slippage + fees + funding modeled.
+
+**Worked example (LABUSDT 2026-06-24 12:00, rate -0.31%, SHORT):**
+- Order: €500 × 10x = €5,000
+- Bids: 16.661×202=$3,366 | 16.653×93=$1,549 | 16.652×207=$3,447 ← fills here
+- Entry slip: 0.016% | Exit slip: 0.023%
+- Funding: €15.60 | Fees: €4.00 | Slip: €1.93 | **Net: +€9.66**
+
+**€500 base (LAB 10x, others 5x):**
+
+| Coin | Order | Full | Partial | Skip | Net P&L | Per Trade |
+|------|-------|------|---------|------|---------|-----------|
+| LABUSDT | €5,000 | 123 | 0 | 0 | **+€1,761** | +€14.32 |
+| TAIKOUSDT | €2,500 | 21 | 2 | 0 | **-€938** | -€40.76 |
+| BIRBUSDT | €2,500 | 2 | 0 | 0 | -€33 | -€16.32 |
+| HUSDT | €2,500 | 1 | 1 | 0 | -€109 | -€54.66 |
+| **TOTAL** | | **147** | **3** | **0** | **+€682** | **+€4.55** |
+
+**€250 base (half size):**
+
+| Coin | Order | Net P&L | Per Trade |
+|------|-------|---------|-----------|
+| LABUSDT | €2,500 | **+€996** | +€8.10 |
+| TAIKOUSDT | €1,250 | -€185 | -€8.04 |
+| BIRBUSDT | €1,250 | -€4 | -€2.19 |
+| HUSDT | €1,250 | -€18 | -€9.04 |
+| **TOTAL** | | **+€789** | **+€5.26** |
+
+**Key findings:**
+- **LABUSDT is the only profitable coin** — all others bleed
+- Smaller size (€250) earns MORE per trade (€5.26 vs €4.55) — less slippage
+- TAIKOUSDT loses badly (-€40/trade) — the -2% cap rates + wide books kill it
+- HUSDT/BIRBUSDT: too thin, slippage eats all the funding
+- **Recommendation: LABUSDT only, €250 base (€2,500 notional), skip all other coins**
 
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
