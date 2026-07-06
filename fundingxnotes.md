@@ -22,6 +22,12 @@ Started: July 6, 2026
 4. **Predictability check** — Live monitor T-10min vs settled rate, 10+ observations
 5. **€50 manual live test** on best coin
 
+## Workflow
+- **Code locally** (Windows, VS Code, c:\Users\User\fundingx)
+- **Run/deploy on Azure** (48.209.16.63, SSH via `ssh -i "C:\Users\User\Desktop\arb_key.pem" azureuser@48.209.16.63`)
+- Write scripts locally → SCP/rsync to Azure → run there
+- Always commit + push to GitHub after each step
+
 ## Working Rules
 - Raw data first, never state unverified numbers
 - Units explicit (API decimals: 0.0002 = 0.02%)
