@@ -40,8 +40,20 @@ Started: July 6, 2026
 - [x] Step 1: Fees → threshold ✅ (2026-07-06)
 - [x] Step 2: Scan all pairs ✅ (2026-07-06)
 - [x] Step 3: Book test on top candidates ✅ (2026-07-06)
-- [ ] Step 4: Predictability check
+- [x] Step A: cryptohftdata exploration ✅ (2026-07-06)
+- [x] Step B/C: L2 book reconstruction at settlement T-5min ✅ (2026-07-06)
+- [x] Task 1: Missing coins check ✅ (2026-07-06) — all 0 qualifying in 14d
+- [x] Task 2: Entry timing analysis ✅ (2026-07-06) — T-5 worst, T-15/T-1 best
+- [ ] Step 4: Predictability check (live monitor LABUSDT)
 - [ ] Step 5: €50 manual live test
+
+## Current Status (2026-07-06)
+- **Only viable coin: LABUSDT** (123 qualifying in 14d, $4.7k median depth)
+- **Best entry timing: T-15min or T-1min** (NOT T-5 — books collapse there)
+- PIPPIN/COAI/BEAT/AIA/HOME: all dried up in last 14 days
+- TAIKOUSDT: suspicious -2.0% cap hits
+- HUSDT/BIRBUSDT: too thin or too few events
+- Next: Step 4 predictability check → Step 5 €50 live test
 
 ## Key Findings
 ### Step 1 — Fee → Threshold (2026-07-06)
