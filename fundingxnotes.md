@@ -137,5 +137,32 @@ Method: vectorized pandas groupby replay, top 5 levels each side, smaller side i
 - HUSDT: $290 worst case — unusable
 - BIRBUSDT: only 2 events — not enough data
 
+### Task 1 — Missing Coins (2026-07-06)
+PIPPINUSDT, COAIUSDT, BEATUSDT, AIAUSDT, HOMEUSDT: **all have 0 qualifying events in last 14 days.**
+Data exists at cryptohftdata and Aster API, but these coins' funding rates dropped below 0.24% threshold recently.
+Their high Step 2 averages were from older historical data. Not usable currently.
+
+### Task 2 — LABUSDT Entry Timing (2026-07-06)
+Book depth at 4 lead times before 123 qualifying settlements:
+
+| Lead Time | Median | Worst | Best |
+|-----------|--------|-------|------|
+| T-30min | $5,058 | $351 | $10,668 |
+| T-15min | $5,086 | $403 | $11,621 |
+| **T-5min** | **$4,696** | **$421** | $17,697 |
+| T-1min | $4,987 | $369 | $14,601 |
+
+**5 thinnest T-5min events — all 4 moments:**
+
+| Time | Rate | T-30 | T-15 | T-5 | T-1 |
+|------|------|------|------|-----|-----|
+| Jun 27 19:00 | -0.58% | $4,781 | $3,477 | **$421** | $3,940 |
+| Jun 27 16:00 | -0.48% | $5,269 | $1,342 | **$507** | $5,289 |
+| Jul 01 04:00 | -0.40% | $9,949 | $3,444 | **$539** | $7,289 |
+| Jun 29 11:00 | -0.62% | $5,974 | $2,021 | **$599** | $4,523 |
+| Jun 24 17:00 | -0.57% | $4,403 | $5,228 | **$733** | $505 |
+
+**Key insight:** Books collapse at T-5min specifically — they are 5-10x deeper at T-30/T-15 and often recover at T-1. T-5 is the worst moment. **Best entry: T-15min or T-1min, NOT T-5.**
+
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
