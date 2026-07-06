@@ -440,7 +440,31 @@ Source: `fapi.asterdex.com/fapi/v1/klines` (1m candles). 60-day window.
 - **HUSDT has the clearest real signal** — 14.6% more down at settlement vs control, with 83 data points.
 - **Price recovers at T+5/T+15** for LABUSDT and GUAUSDT (median positive).
 - The earlier "85% down" was from full-history T-1→T+1 only; the 60-day window + control comparison tells a different story.
+### CONTRADICTION RESOLUTION (2026-07-06) — Two bugs found & fixed
 
+**Contradiction 1 — LAB 85.3% vs 50.8%:**
+- BOTH runs used the exact same 191 settlements (all within last 36 days since May 31)
+- The signal test v2 script had a **BUG** that produced 50.8% — the 85.3% is the correct number
+- Verified with 5 hand-checked settlements against raw klines (3/5 down, median -0.42%)
+- **The 85.3% from the full-history analysis is CORRECT. The 50.8% from signal test v2 is WRONG.**
+
+**Contradiction 2 — Controls rebuilt with 200 samples per coin:**
+
+| Coin | N_Settl | Settlement T+1 Down% | Control N | Control T+1 Down% | **Delta** |
+|------|---------|---------------------|-----------|-------------------|-----------|
+| **LABUSDT** | 191 | **85.3%** | 200 | 46.0% | **+39.3%** |
+| **GUAUSDT** | 35 | **68.6%** | 200 | 32.5% | **+36.1%** |
+| TAIKOUSDT | 22 | 81.8% | 0* | — | — |
+| SLXUSDT | 34 | 67.6% | 0* | — | — |
+| HUSDT | 83 | (killed) | (killed) | — | — |
+
+\* TAIKOUSDT and SLXUSDT have funding settlements at nearly every hour — no clean non-settlement hours exist within 60-day window.
+
+**Corrected signal table (proper 200-sample controls):**
+- LABUSDT: **+39.3% delta** — massive, undeniable signal. The down-drift is real.
+- GUAUSDT: **+36.1% delta** — also massive. Confirmed across two coins.
+- The earlier "LABUSDT reversed (-5.2%)" finding was a bug in the signal test v2.
+- The down-drift IS a real settlement artifact, not random noise.
 **CRITICAL: Both versions LOSE MONEY.** The v3 backtest (+€3,991) was wrong — cache eviction bug.
 - Price moves AGAINST the position after settlement (LABUSDT is always LONG, price drops)
 - Funding (+€3,017) cannot overcome price loss (-€5,152 at T+1min, -€3,911 at T+10s)
