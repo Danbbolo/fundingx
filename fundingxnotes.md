@@ -403,6 +403,44 @@ Source: `fapi.asterdex.com/fapi/v1/klines` (1m candles). NO cryptohftdata.
 
 **Final verdict: The funding sniper strategy as designed does not work for LABUSDT across any regime, any time period, any exit timing. The post-settlement price drift is structural, not cyclical.**
 
+### UNIVERSAL SIGNAL TEST (2026-07-06) — 10 coins, kline-based, settlement vs control
+Source: `fapi.asterdex.com/fapi/v1/klines` (1m candles). 60-day window.
+
+**Settlement drift (price change T-1 → T+X):**
+| Coin | N | T+1 Down% | T+1 Med | T+5 Down% | T+5 Med | T+15 Down% | T+15 Med |
+|------|---|-----------|---------|-----------|---------|------------|----------|
+| LABUSDT | 191 | 50.8% | -0.02% | 41.9% | +0.15% | 37.2% | +0.43% |
+| GUAUSDT | 35 | 51.4% | -0.01% | 45.7% | +0.25% | 45.7% | +0.29% |
+| TAIKOUSDT | 22 | 63.6% | -0.18% | 50.0% | +0.17% | 54.5% | -0.76% |
+| SLXUSDT | 34 | 44.1% | 0.00% | 55.9% | -0.21% | 50.0% | +0.05% |
+| HUSDT | 83 | 50.6% | -0.01% | 55.4% | -0.25% | 53.0% | -0.27% |
+| REUSDT | 10 | 30.0% | +0.38% | 70.0% | -0.19% | 50.0% | +0.27% |
+
+**Control (random non-settlement hours):**
+| Coin | N | T+1 Down% | T+1 Med |
+|------|---|-----------|---------|
+| LABUSDT | 50 | 56.0% | -0.06% |
+| GUAUSDT | 50 | 40.0% | 0.00% |
+| SLXUSDT | 30 | 36.7% | 0.00% |
+| HUSDT | 50 | 36.0% | 0.00% |
+| REUSDT | 11 | 18.2% | 0.00% |
+
+**Signal vs Artifact (T+1min):**
+| Coin | Settlement Down% | Control Down% | Delta | Verdict |
+|------|-----------------|---------------|-------|---------|
+| LABUSDT | 50.8% | 56.0% | -5.2% | **REVERSED** (settlement LESS down than random!) |
+| GUAUSDT | 51.4% | 40.0% | +11.4% | **SIGNAL** |
+| TAIKOUSDT | 63.6% | 0.0% | +63.6% | **SIGNAL** (but control N=2, unreliable) |
+| SLXUSDT | 44.1% | 36.7% | +7.4% | **WEAK** |
+| HUSDT | 50.6% | 36.0% | +14.6% | **SIGNAL** (strongest, N=83) |
+| REUSDT | 30.0% | 18.2% | +11.8% | **SIGNAL** (but N=10) |
+
+**Key findings:**
+- **LABUSDT is REVERSED** — settlement drift is LESS negative than random hours. No settlement-specific down-drift.
+- **HUSDT has the clearest real signal** — 14.6% more down at settlement vs control, with 83 data points.
+- **Price recovers at T+5/T+15** for LABUSDT and GUAUSDT (median positive).
+- The earlier "85% down" was from full-history T-1→T+1 only; the 60-day window + control comparison tells a different story.
+
 **CRITICAL: Both versions LOSE MONEY.** The v3 backtest (+€3,991) was wrong — cache eviction bug.
 - Price moves AGAINST the position after settlement (LABUSDT is always LONG, price drops)
 - Funding (+€3,017) cannot overcome price loss (-€5,152 at T+1min, -€3,911 at T+10s)
