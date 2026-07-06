@@ -327,5 +327,26 @@ Previous backtest had direction backwards!
 **Why identical?** The price P&L comes from price movement between settlements (hours), not from seconds after exit. LABUSDT's price at T+10s ≈ price at T+1min — the market doesn't move in that window. Exit timing is irrelevant for this strategy.
 
 **Implication:** No need to rush exits. T+1min is fine. Focus risk management on position sizing and coin selection, not exit timing.
-## Checkpoint Log
+### EXIT TIMING FIX (2026-07-06) — Previous comparison had cache eviction bug
+The first comparison showed identical results because `_MAX_CACHE = 12` evicted 137 of 149 files.
+Fixed version with all 149 files loaded shows **DRAMATICALLY different results:**
+
+| Metric | T+1min | T+10s | Delta |
+|--------|--------|-------|-------|
+| Total net | **-€3,288** | **-€2,112** | +€1,176 |
+| Funding | +€3,017 | +€3,017 | €0 |
+| **Price P&L** | **-€5,152** | **-€3,911** | **+€1,241** |
+| Avg exit slip | 0.073% | 0.084% | +0.01% |
+| Win% | 23.6% | 23.6% | 0% |
+
+**CRITICAL: Both versions LOSE MONEY.** The v3 backtest (+€3,991) was wrong — cache eviction bug.
+- Price moves AGAINST the position after settlement (LABUSDT is always LONG, price drops)
+- Funding (+€3,017) cannot overcome price loss (-€5,152 at T+1min, -€3,911 at T+10s)
+- **Shorter exit (T+10s) loses €1,241 less** — less exposure to adverse price move
+- Exit slippage slightly worse at T+10s (+0.01%) but price benefit far outweighs it
+
+**Implication: Strategy is broken for LABUSDT.** The funding edge doesn't compensate for the post-settlement price drift. Need to either:
+1. Find coins where funding consistently exceeds price drift
+2. Hedge the price risk (delta-neutral)
+3. Accept this strategy doesn't work as-is## Checkpoint Log
 <!-- Add checkpoints as we progress -->
