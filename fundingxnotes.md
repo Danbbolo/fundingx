@@ -37,14 +37,20 @@ Started: July 6, 2026
 - Always exclude Aster Simple/Degen modes
 
 ## Progress Checklist
-- [ ] Step 1: Fees → threshold
+- [x] Step 1: Fees → threshold ✅ (2026-07-06)
 - [ ] Step 2: Scan all pairs
 - [ ] Step 3: Book test on top candidates
 - [ ] Step 4: Predictability check
 - [ ] Step 5: €50 manual live test
 
 ## Key Findings
-<!-- Add findings as we go -->
+### Step 1 — Fee → Threshold (2026-07-06)
+- Source: https://docs.asterdex.com/trading/perpetuals/fees-and-specs/fees.md
+- USDT-Perpetual Contracts (Pro mode): Maker = 0%, Taker = 0.04%
+- Round-trip taker = 2 × 0.0004 = 0.0008 (0.08%)
+- **Threshold = 0.0024 (0.24%)**
+- No interval scaling — fees are per-trade regardless of funding interval
+- A funding rate must have |rate| >= 0.0024 to qualify
 
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
