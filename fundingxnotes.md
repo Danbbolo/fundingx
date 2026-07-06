@@ -217,6 +217,49 @@ Entry: market order walking top 20 levels. Exit: same. Slippage + fees + funding
 - TAIKOUSDT loses badly (-€40/trade) — the -2% cap rates + wide books kill it
 - HUSDT/BIRBUSDT: too thin, slippage eats all the funding
 - **Recommendation: LABUSDT only, €250 base (€2,500 notional), skip all other coins**
+### Direction Fix + Price P&L — Corrected Backtest v2 (2026-07-06)
+Source: Aster docs — "Negative funding rate: short traders pay long traders."
+**FIX: negative rate → LONG (we receive), positive rate → SHORT (we receive)**
+Previous backtest had direction backwards!
 
+**Worked example (LABUSDT Jun 24 12:00, rate -0.31%, LONG):**
+- Order: €500 × 10x = €5,000
+- Buy asks: 16.676×202=$3,369 | 16.678×29=$484 | 16.685×202=$3,370 ← fills
+- Entry: 16.678 × 299.8 base = €5,000 (slip 0.014%)
+- Exit:  16.768 × 298.2 base = €5,000 (slip 0.023%)
+- **Price P&L: +€26.95** (price moved up, we profited as long)
+- Funding: €15.60 | Fees: €4.00 | Slip: €1.83 | **Net: +€36.72**
+
+**CORRECTED MAIN COINS (€500 base):**
+
+| Coin | Order | Net P&L | Funding | Price P&L | Per Trade |
+|------|-------|---------|---------|-----------|-----------|
+| **LABUSDT** | €5,000 | **+€3,991** | +€3,017 | +€2,107 | +€32.45 |
+| **TAIKOUSDT** | €2,500 | **+€2,095** | +€649 | +€2,659 | +€91.07 |
+| BIRBUSDT | €2,500 | -€96 | +€13 | -€66 | -€47.97 |
+| HUSDT | €2,500 | -€110 | +€16 | -€28 | -€55.14 |
+| **TOTAL** | | **+€5,880** | **+€3,694** | **+€4,672** | **+€39.20** |
+
+**CORRECTED LEFTOVER COINS (€500 base):**
+
+| Coin | Order | Qual | Funding | Price P&L | Net |
+|------|-------|------|---------|-----------|-----|
+| **GUAUSDT** | €2,500 | 15 | +€539 | +€753 | **+€971** |
+| SLXUSDT | €2,500 | 27 | +€279 | -€46 | -€80 |
+| ZKPUSDT | €2,500 | 6 | +€49 | -€84 | -€149 |
+| REUSDT | €2,500 | 5 | +€35 | -€25 | -€32 |
+
+**COMBINED GRAND TOTAL (€500 base, all 8 coins, 203 trades):**
+- **NET: +€6,589** over 14 days
+- Funding: +€4,596 | Price P&L: +€5,269
+- Funding and price P&L BOTH contribute roughly equally
+
+**Key findings from corrected backtest:**
+- TAIKOUSDT flips from -€938 to +€2,095 with correct direction!
+- LABUSDT still the best (consistent), TAIKOUSDT volatile but profitable
+- **GUAUSDT is a new star**: +€971 in 15 trades, consistent funding + price
+- Price P&L is ~58% of total profit — this isn't just a funding play, price moves matter
+- Smaller size still better per-trade (less slippage)
+- **Recommended coins: LABUSDT, TAIKOUSDT, GUAUSDT**
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
