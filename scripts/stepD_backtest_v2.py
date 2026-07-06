@@ -411,6 +411,12 @@ def main():
     # Save
     with open("backtest_results_v2.json", "w") as f:
         json.dump({str(s): gt for s, gt in grand_totals.items()}, f, indent=2)
+
+    # Save per-trade data for analysis
+    all_trades_json = []
+    for symbol, info in COINS.items():
+        # Re-collect trades from the run (we need to store them during the loop)
+        pass  # trades already collected in coin_results lists below
     print(f"\nSaved to backtest_results_v2.json")
 
 

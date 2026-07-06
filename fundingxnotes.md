@@ -290,5 +290,33 @@ Previous backtest had direction backwards!
 - TAIKOUSDT and GUAUSDT only appeared in days 8-14 → would be MISSED in real life
 - OOS still profitable but 47% less than IS → some overfitting present
 - **LABUSDT is the only robust coin** — survives the OOS split
+
+### CORRECTED Post-Hoc Analysis v2 (2026-07-06) — €500 run only, deduplicated
+**Check 1 — Distribution (trade counts verified: LAB=123, TAIKO=23, BIRB=2, H=2):**
+
+| Coin | N | Median | Worst | Best | Win% | MaxLoseStreak | OutlierDep% |
+|------|---|--------|-------|------|------|---------------|-------------|
+| LABUSDT | 123 | +€17.95 | -€314 | +€447 | 63.4% | 5 | 27.9% |
+| TAIKOUSDT | 23 | -€35.64 | -€382 | +€2,814 | 26.1% | 5 | **197.9%** |
+| BIRBUSDT | 2 | -€34.43 | -€62 | -€34 | 0% | 2 | — |
+| HUSDT | 2 | -€54.93 | -€55 | -€55 | 0% | 2 | — |
+
+- Top 5 trades = **86.3%** of total profit — extremely outlier-dependent
+- TAIKOUSDT: 197.9% outlier dependency — one +€2,804 trade carries everything
+- LABUSDT: 5-trade max losing streak (not 88 — that was the doubling bug)
+- **LABUSDT is the only coin worth trading** — consistent median, reasonable win rate
+
+**Check 2 — Price P&L shape:**
+- Mean: +€31.14 | Median: -€3.45 | Std: €266
+- 48% positive, 52% negative — near coin-flip
+- NOT mean reversion — fat-tailed, a few huge spikes carry everything
+- TAIKOUSDT Jul 1-2 price spike (+€2,804, +€1,147) dominates
+- **Price P&L is speculative noise, funding is the real alpha**
+
+**Check 3 — OOS split (days 1-7 select → days 8-14 trade):**
+- IS: +€2,550 | OOS: +€1,331 | OOS/IS = 0.52x
+- Only LABUSDT survived OOS filter (TAIKOUSDT/BIRBUSDT appeared later)
+- OOS still profitable but 48% decay
+- **LABUSDT is the only robust, OOS-surviving coin**
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
