@@ -368,6 +368,41 @@ Source: `fapi.asterdex.com/fapi/v1/klines` (1m candles). NOT cryptohftdata.
 
 **Final conclusion: LABUSDT price drops 69% of the time after settlement. We go LONG (negative rate = longs receive), collecting funding but bleeding on price. The v3 backtest was fabricated by cache eviction. Strategy is net negative.**
 
+### FULL-HISTORY DRIFT vs FUNDING (2026-07-06) — 191 settlements, 262 days, Aster klines only
+Source: `fapi.asterdex.com/fapi/v1/klines` (1m candles). NO cryptohftdata.
+
+**(A) Overall:**
+| Metric | Value |
+|--------|-------|
+| Settlements | 191 |
+| Funding total | +€5,445 |
+| **Price P&L total** | **-€7,860** |
+| **NET** | **-€2,414** |
+| Per settlement | -€12.64 |
+| Price UP after | 28 (14.7%) |
+| Price DOWN after | 163 (85.3%) |
+| Avg drift UP | +0.62% |
+| Avg drift DOWN | -1.07% |
+
+**(B) By regime (weekly price change):**
+| Regime | N | Funding | Price P&L | Net | Per Trade |
+|--------|---|---------|-----------|-----|-----------|
+| Uptrend | 136 | +€4,257 | -€6,021 | -€1,764 | -€12.97 |
+| Downtrend | 55 | +€1,188 | -€1,839 | -€651 | -€11.83 |
+| Flat | 0 | — | — | — | — |
+
+**No regime works.** Uptrend, downtrend — both lose ~€12-13 per trade. Price drops 85% of the time after settlement regardless of weekly trend. Funding (+€5,445) consistently fails to cover price drift (-€7,860).
+
+**Weekly breakdown:**
+| Week | Regime | N | Funding | Price | Net |
+|------|--------|---|---------|-------|-----|
+| W21 | uptrend | 2 | +€29 | +€25 | +€54 |
+| W22 | uptrend | 66 | +€2,400 | -€4,048 | -€1,648 |
+| W25 | downtrend | 55 | +€1,188 | -€1,839 | -€651 |
+| W26 | uptrend | 68 | +€1,829 | -€1,998 | -€169 |
+
+**Final verdict: The funding sniper strategy as designed does not work for LABUSDT across any regime, any time period, any exit timing. The post-settlement price drift is structural, not cyclical.**
+
 **CRITICAL: Both versions LOSE MONEY.** The v3 backtest (+€3,991) was wrong — cache eviction bug.
 - Price moves AGAINST the position after settlement (LABUSDT is always LONG, price drops)
 - Funding (+€3,017) cannot overcome price loss (-€5,152 at T+1min, -€3,911 at T+10s)
