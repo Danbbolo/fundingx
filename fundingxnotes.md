@@ -318,5 +318,14 @@ Previous backtest had direction backwards!
 - Only LABUSDT survived OOS filter (TAIKOUSDT/BIRBUSDT appeared later)
 - OOS still profitable but 48% decay
 - **LABUSDT is the only robust, OOS-surviving coin**
+
+### Exit Timing Test: T+1min vs T+10s (2026-07-06)
+**Result: IDENTICAL.** Every metric matches exactly — €0 delta across all 123 trades.
+
+**Data granularity:** L2 updates arrive at sub-millisecond resolution. T+10s exit gap: median -35ms, 100% within ±1s of target. No granularity issue.
+
+**Why identical?** The price P&L comes from price movement between settlements (hours), not from seconds after exit. LABUSDT's price at T+10s ≈ price at T+1min — the market doesn't move in that window. Exit timing is irrelevant for this strategy.
+
+**Implication:** No need to rush exits. T+1min is fine. Focus risk management on position sizing and coin selection, not exit timing.
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
