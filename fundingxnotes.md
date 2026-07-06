@@ -104,5 +104,38 @@ Tested: COAIUSDT, LABUSDT, PIPPINUSDT, HUSDT, BEATUSDT
 - File sizes: LABUSDT 2MB/hr, others 49KB-500KB/hr
 - **Smart subset needed**: only download hours with qualifying settlements
 
+### Step B/C — L2 Book at Settlement T-5min (2026-07-06)
+Source: cryptohftdata.com historical L2 order book data
+Method: vectorized pandas groupby replay, top 5 levels each side, smaller side in USDT
+
+**VERDICT TABLE (book depth at T-5min before qualifying settlements):**
+
+| Symbol | Calm_Baseline | Worst_Case | Median | Best | Qualifying |
+|--------|--------------|------------|--------|------|------------|
+| **LABUSDT** | $5,615 | **$421** | $4,696 | $17,697 | 123 |
+| TAIKOUSDT | $783 | $341 | $1,800 | $14,449 | 23 |
+| BIRBUSDT | $1,798 | $1,498 | $3,488 | $3,488 | 2 |
+| HUSDT | $1,179 | $290 | $382 | $382 | 2 |
+
+**LABUSDT worst 10 settlements (thinnest books):**
+| Time | Rate% | Book_USDT |
+|------|-------|-----------|
+| 2026-06-27 19:00 | -0.58% | $421 |
+| 2026-06-27 16:00 | -0.48% | $507 |
+| 2026-07-01 04:00 | -0.40% | $539 |
+| 2026-06-29 11:00 | -0.62% | $599 |
+| 2026-06-24 17:00 | -0.57% | $733 |
+
+**TAIKOUSDT notes:**
+- Rates hit -2.0% cap repeatedly — investigate if this is a data artifact
+- Book varies wildly: $341 to $14,449
+
+**Key takeaways:**
+- 0 zero-book results — T-5min fix works (download prev hour + current hour)
+- Book shrinks during hot settlements vs calm baseline
+- LABUSDT: worst-case $421 means €500 at 1x leverage barely fits, at any leverage it's too thin
+- HUSDT: $290 worst case — unusable
+- BIRBUSDT: only 2 events — not enough data
+
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->

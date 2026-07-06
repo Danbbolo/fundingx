@@ -1,0 +1,768 @@
+{
+  "results": {
+    "TAIKOUSDT": [
+      {
+        "settlement_time": "2026-07-01T13:00:00+00:00",
+        "settled_rate_pct": -0.2931,
+        "book_5min_usdt": 13499.79
+      },
+      {
+        "settlement_time": "2026-07-01T14:00:00+00:00",
+        "settled_rate_pct": -1.1343,
+        "book_5min_usdt": 13709.69
+      },
+      {
+        "settlement_time": "2026-07-01T15:00:00+00:00",
+        "settled_rate_pct": -0.7278,
+        "book_5min_usdt": 2019.84
+      },
+      {
+        "settlement_time": "2026-07-01T16:00:00+00:00",
+        "settled_rate_pct": -0.7307,
+        "book_5min_usdt": 13960.58
+      },
+      {
+        "settlement_time": "2026-07-01T17:00:00.001000+00:00",
+        "settled_rate_pct": -0.2425,
+        "book_5min_usdt": 2508.61
+      },
+      {
+        "settlement_time": "2026-07-01T18:00:00+00:00",
+        "settled_rate_pct": -0.3057,
+        "book_5min_usdt": 14449.12
+      },
+      {
+        "settlement_time": "2026-07-01T19:00:00+00:00",
+        "settled_rate_pct": -0.2828,
+        "book_5min_usdt": 2027.88
+      },
+      {
+        "settlement_time": "2026-07-01T22:00:00+00:00",
+        "settled_rate_pct": -0.6193,
+        "book_5min_usdt": 1419.95
+      },
+      {
+        "settlement_time": "2026-07-02T00:00:00.001000+00:00",
+        "settled_rate_pct": -1.6898,
+        "book_5min_usdt": 1425.27
+      },
+      {
+        "settlement_time": "2026-07-02T01:00:00+00:00",
+        "settled_rate_pct": -1.6757,
+        "book_5min_usdt": 1722.12
+      },
+      {
+        "settlement_time": "2026-07-02T02:00:00+00:00",
+        "settled_rate_pct": -1.4568,
+        "book_5min_usdt": 341.34
+      },
+      {
+        "settlement_time": "2026-07-02T03:00:00.001000+00:00",
+        "settled_rate_pct": -0.8329,
+        "book_5min_usdt": 4557.27
+      },
+      {
+        "settlement_time": "2026-07-02T04:00:00+00:00",
+        "settled_rate_pct": -1.1131,
+        "book_5min_usdt": 1363.8
+      },
+      {
+        "settlement_time": "2026-07-02T05:00:00+00:00",
+        "settled_rate_pct": -1.5773,
+        "book_5min_usdt": 3432.95
+      },
+      {
+        "settlement_time": "2026-07-02T06:00:00+00:00",
+        "settled_rate_pct": -2.0,
+        "book_5min_usdt": 1110.9
+      },
+      {
+        "settlement_time": "2026-07-02T07:00:00+00:00",
+        "settled_rate_pct": -2.0,
+        "book_5min_usdt": 383.88
+      },
+      {
+        "settlement_time": "2026-07-02T08:00:00.003000+00:00",
+        "settled_rate_pct": -2.0,
+        "book_5min_usdt": 1290.0
+      },
+      {
+        "settlement_time": "2026-07-02T09:00:00+00:00",
+        "settled_rate_pct": -2.0,
+        "book_5min_usdt": 2351.98
+      },
+      {
+        "settlement_time": "2026-07-02T10:00:00+00:00",
+        "settled_rate_pct": -2.0,
+        "book_5min_usdt": 1955.44
+      },
+      {
+        "settlement_time": "2026-07-02T11:00:00+00:00",
+        "settled_rate_pct": -1.6626,
+        "book_5min_usdt": 1800.22
+      },
+      {
+        "settlement_time": "2026-07-02T12:00:00.001000+00:00",
+        "settled_rate_pct": -1.4269,
+        "book_5min_usdt": 607.78
+      },
+      {
+        "settlement_time": "2026-07-02T13:00:00+00:00",
+        "settled_rate_pct": -1.3008,
+        "book_5min_usdt": 575.06
+      },
+      {
+        "settlement_time": "2026-07-02T14:00:00+00:00",
+        "settled_rate_pct": -0.397,
+        "book_5min_usdt": 1232.7
+      }
+    ],
+    "LABUSDT": [
+      {
+        "settlement_time": "2026-06-24T12:00:00.012000+00:00",
+        "settled_rate_pct": -0.3119,
+        "book_5min_usdt": 5641.15
+      },
+      {
+        "settlement_time": "2026-06-24T13:00:00+00:00",
+        "settled_rate_pct": -0.3081,
+        "book_5min_usdt": 12822.86
+      },
+      {
+        "settlement_time": "2026-06-24T14:00:00+00:00",
+        "settled_rate_pct": -0.5566,
+        "book_5min_usdt": 17697.28
+      },
+      {
+        "settlement_time": "2026-06-24T15:00:00.006000+00:00",
+        "settled_rate_pct": -1.1557,
+        "book_5min_usdt": 3770.23
+      },
+      {
+        "settlement_time": "2026-06-24T16:00:00+00:00",
+        "settled_rate_pct": -1.0594,
+        "book_5min_usdt": 11827.24
+      },
+      {
+        "settlement_time": "2026-06-24T17:00:00.001000+00:00",
+        "settled_rate_pct": -0.5723,
+        "book_5min_usdt": 733.12
+      },
+      {
+        "settlement_time": "2026-06-24T18:00:00+00:00",
+        "settled_rate_pct": -0.4547,
+        "book_5min_usdt": 9435.38
+      },
+      {
+        "settlement_time": "2026-06-24T19:00:00.005000+00:00",
+        "settled_rate_pct": -0.3081,
+        "book_5min_usdt": 2088.12
+      },
+      {
+        "settlement_time": "2026-06-24T20:00:00+00:00",
+        "settled_rate_pct": -0.2867,
+        "book_5min_usdt": 6779.21
+      },
+      {
+        "settlement_time": "2026-06-24T21:00:00+00:00",
+        "settled_rate_pct": -0.3485,
+        "book_5min_usdt": 2904.59
+      },
+      {
+        "settlement_time": "2026-06-25T07:00:00+00:00",
+        "settled_rate_pct": -0.2578,
+        "book_5min_usdt": 3887.33
+      },
+      {
+        "settlement_time": "2026-06-25T08:00:00+00:00",
+        "settled_rate_pct": -0.27,
+        "book_5min_usdt": 7129.64
+      },
+      {
+        "settlement_time": "2026-06-26T07:00:00+00:00",
+        "settled_rate_pct": -0.3058,
+        "book_5min_usdt": 6955.39
+      },
+      {
+        "settlement_time": "2026-06-26T08:00:00.001000+00:00",
+        "settled_rate_pct": -0.2947,
+        "book_5min_usdt": 5710.09
+      },
+      {
+        "settlement_time": "2026-06-26T09:00:00+00:00",
+        "settled_rate_pct": -0.3336,
+        "book_5min_usdt": 5717.18
+      },
+      {
+        "settlement_time": "2026-06-26T10:00:00.001000+00:00",
+        "settled_rate_pct": -0.2713,
+        "book_5min_usdt": 5751.45
+      },
+      {
+        "settlement_time": "2026-06-26T11:00:00.001000+00:00",
+        "settled_rate_pct": -0.3207,
+        "book_5min_usdt": 4695.55
+      },
+      {
+        "settlement_time": "2026-06-26T12:00:00+00:00",
+        "settled_rate_pct": -0.5142,
+        "book_5min_usdt": 3114.28
+      },
+      {
+        "settlement_time": "2026-06-26T13:00:00.004000+00:00",
+        "settled_rate_pct": -0.5525,
+        "book_5min_usdt": 3746.02
+      },
+      {
+        "settlement_time": "2026-06-26T14:00:00+00:00",
+        "settled_rate_pct": -0.3592,
+        "book_5min_usdt": 2081.38
+      },
+      {
+        "settlement_time": "2026-06-26T15:00:00+00:00",
+        "settled_rate_pct": -0.3853,
+        "book_5min_usdt": 3584.71
+      },
+      {
+        "settlement_time": "2026-06-26T16:00:00+00:00",
+        "settled_rate_pct": -0.3632,
+        "book_5min_usdt": 7294.51
+      },
+      {
+        "settlement_time": "2026-06-26T17:00:00+00:00",
+        "settled_rate_pct": -0.3232,
+        "book_5min_usdt": 5004.74
+      },
+      {
+        "settlement_time": "2026-06-26T18:00:00+00:00",
+        "settled_rate_pct": -0.2559,
+        "book_5min_usdt": 5794.0
+      },
+      {
+        "settlement_time": "2026-06-26T20:00:00+00:00",
+        "settled_rate_pct": -0.2654,
+        "book_5min_usdt": 4007.6
+      },
+      {
+        "settlement_time": "2026-06-26T21:00:00+00:00",
+        "settled_rate_pct": -0.2827,
+        "book_5min_usdt": 7586.62
+      },
+      {
+        "settlement_time": "2026-06-26T22:00:00+00:00",
+        "settled_rate_pct": -0.2404,
+        "book_5min_usdt": 4910.88
+      },
+      {
+        "settlement_time": "2026-06-27T01:00:00.010000+00:00",
+        "settled_rate_pct": -0.3175,
+        "book_5min_usdt": 3935.12
+      },
+      {
+        "settlement_time": "2026-06-27T02:00:00.003000+00:00",
+        "settled_rate_pct": -0.41,
+        "book_5min_usdt": 3439.04
+      },
+      {
+        "settlement_time": "2026-06-27T03:00:00.012000+00:00",
+        "settled_rate_pct": -0.5975,
+        "book_5min_usdt": 1191.78
+      },
+      {
+        "settlement_time": "2026-06-27T04:00:00+00:00",
+        "settled_rate_pct": -0.4586,
+        "book_5min_usdt": 1225.78
+      },
+      {
+        "settlement_time": "2026-06-27T05:00:00.001000+00:00",
+        "settled_rate_pct": -0.3597,
+        "book_5min_usdt": 4654.37
+      },
+      {
+        "settlement_time": "2026-06-27T06:00:00+00:00",
+        "settled_rate_pct": -0.3813,
+        "book_5min_usdt": 6466.16
+      },
+      {
+        "settlement_time": "2026-06-27T07:00:00+00:00",
+        "settled_rate_pct": -0.4989,
+        "book_5min_usdt": 1340.74
+      },
+      {
+        "settlement_time": "2026-06-27T08:00:00.001000+00:00",
+        "settled_rate_pct": -0.4163,
+        "book_5min_usdt": 1950.08
+      },
+      {
+        "settlement_time": "2026-06-27T09:00:00+00:00",
+        "settled_rate_pct": -0.4307,
+        "book_5min_usdt": 5102.47
+      },
+      {
+        "settlement_time": "2026-06-27T10:00:00+00:00",
+        "settled_rate_pct": -0.5465,
+        "book_5min_usdt": 737.16
+      },
+      {
+        "settlement_time": "2026-06-27T11:00:00+00:00",
+        "settled_rate_pct": -0.6574,
+        "book_5min_usdt": 4933.13
+      },
+      {
+        "settlement_time": "2026-06-27T12:00:00.001000+00:00",
+        "settled_rate_pct": -0.5782,
+        "book_5min_usdt": 5058.52
+      },
+      {
+        "settlement_time": "2026-06-27T13:00:00.002000+00:00",
+        "settled_rate_pct": -0.3764,
+        "book_5min_usdt": 5954.45
+      },
+      {
+        "settlement_time": "2026-06-27T14:00:00.003000+00:00",
+        "settled_rate_pct": -0.3185,
+        "book_5min_usdt": 7372.3
+      },
+      {
+        "settlement_time": "2026-06-27T15:00:00.001000+00:00",
+        "settled_rate_pct": -0.4284,
+        "book_5min_usdt": 4974.7
+      },
+      {
+        "settlement_time": "2026-06-27T16:00:00+00:00",
+        "settled_rate_pct": -0.4819,
+        "book_5min_usdt": 506.68
+      },
+      {
+        "settlement_time": "2026-06-27T17:00:00+00:00",
+        "settled_rate_pct": -0.6722,
+        "book_5min_usdt": 2975.18
+      },
+      {
+        "settlement_time": "2026-06-27T18:00:00+00:00",
+        "settled_rate_pct": -0.6456,
+        "book_5min_usdt": 3157.6
+      },
+      {
+        "settlement_time": "2026-06-27T19:00:00+00:00",
+        "settled_rate_pct": -0.584,
+        "book_5min_usdt": 420.74
+      },
+      {
+        "settlement_time": "2026-06-27T20:00:00+00:00",
+        "settled_rate_pct": -0.5612,
+        "book_5min_usdt": 2916.74
+      },
+      {
+        "settlement_time": "2026-06-27T21:00:00+00:00",
+        "settled_rate_pct": -0.5138,
+        "book_5min_usdt": 3089.75
+      },
+      {
+        "settlement_time": "2026-06-27T22:00:00.002000+00:00",
+        "settled_rate_pct": -0.4899,
+        "book_5min_usdt": 4310.62
+      },
+      {
+        "settlement_time": "2026-06-27T23:00:00+00:00",
+        "settled_rate_pct": -0.4642,
+        "book_5min_usdt": 5183.4
+      },
+      {
+        "settlement_time": "2026-06-28T00:00:00+00:00",
+        "settled_rate_pct": -0.4078,
+        "book_5min_usdt": 5384.18
+      },
+      {
+        "settlement_time": "2026-06-28T01:00:00.001000+00:00",
+        "settled_rate_pct": -0.3537,
+        "book_5min_usdt": 4795.53
+      },
+      {
+        "settlement_time": "2026-06-28T02:00:00+00:00",
+        "settled_rate_pct": -0.2967,
+        "book_5min_usdt": 1800.42
+      },
+      {
+        "settlement_time": "2026-06-28T03:00:00.001000+00:00",
+        "settled_rate_pct": -0.294,
+        "book_5min_usdt": 4592.55
+      },
+      {
+        "settlement_time": "2026-06-28T04:00:00.001000+00:00",
+        "settled_rate_pct": -0.2622,
+        "book_5min_usdt": 4685.54
+      },
+      {
+        "settlement_time": "2026-06-29T01:00:00+00:00",
+        "settled_rate_pct": -0.3102,
+        "book_5min_usdt": 4885.86
+      },
+      {
+        "settlement_time": "2026-06-29T02:00:00+00:00",
+        "settled_rate_pct": -0.3501,
+        "book_5min_usdt": 4459.36
+      },
+      {
+        "settlement_time": "2026-06-29T03:00:00+00:00",
+        "settled_rate_pct": -0.2567,
+        "book_5min_usdt": 4764.51
+      },
+      {
+        "settlement_time": "2026-06-29T05:00:00+00:00",
+        "settled_rate_pct": -0.262,
+        "book_5min_usdt": 5327.94
+      },
+      {
+        "settlement_time": "2026-06-29T07:00:00+00:00",
+        "settled_rate_pct": -0.251,
+        "book_5min_usdt": 8545.52
+      },
+      {
+        "settlement_time": "2026-06-29T08:00:00.005000+00:00",
+        "settled_rate_pct": -0.2796,
+        "book_5min_usdt": 4086.34
+      },
+      {
+        "settlement_time": "2026-06-29T09:00:00+00:00",
+        "settled_rate_pct": -0.3984,
+        "book_5min_usdt": 3100.81
+      },
+      {
+        "settlement_time": "2026-06-29T10:00:00+00:00",
+        "settled_rate_pct": -0.6594,
+        "book_5min_usdt": 2938.84
+      },
+      {
+        "settlement_time": "2026-06-29T11:00:00+00:00",
+        "settled_rate_pct": -0.6224,
+        "book_5min_usdt": 599.18
+      },
+      {
+        "settlement_time": "2026-06-29T12:00:00+00:00",
+        "settled_rate_pct": -0.8207,
+        "book_5min_usdt": 3517.65
+      },
+      {
+        "settlement_time": "2026-06-29T13:00:00+00:00",
+        "settled_rate_pct": -0.7964,
+        "book_5min_usdt": 4220.04
+      },
+      {
+        "settlement_time": "2026-06-29T14:00:00.009000+00:00",
+        "settled_rate_pct": -0.502,
+        "book_5min_usdt": 5665.27
+      },
+      {
+        "settlement_time": "2026-06-29T15:00:00+00:00",
+        "settled_rate_pct": -0.5028,
+        "book_5min_usdt": 4271.98
+      },
+      {
+        "settlement_time": "2026-06-29T16:00:00+00:00",
+        "settled_rate_pct": -0.4776,
+        "book_5min_usdt": 2630.44
+      },
+      {
+        "settlement_time": "2026-06-29T17:00:00.002000+00:00",
+        "settled_rate_pct": -0.366,
+        "book_5min_usdt": 4218.36
+      },
+      {
+        "settlement_time": "2026-06-29T18:00:00+00:00",
+        "settled_rate_pct": -0.362,
+        "book_5min_usdt": 4609.64
+      },
+      {
+        "settlement_time": "2026-06-29T19:00:00.006000+00:00",
+        "settled_rate_pct": -0.314,
+        "book_5min_usdt": 7550.91
+      },
+      {
+        "settlement_time": "2026-06-29T20:00:00.001000+00:00",
+        "settled_rate_pct": -0.3019,
+        "book_5min_usdt": 6158.11
+      },
+      {
+        "settlement_time": "2026-06-29T21:00:00.001000+00:00",
+        "settled_rate_pct": -0.3109,
+        "book_5min_usdt": 5862.89
+      },
+      {
+        "settlement_time": "2026-06-29T22:00:00.008000+00:00",
+        "settled_rate_pct": -0.399,
+        "book_5min_usdt": 4715.75
+      },
+      {
+        "settlement_time": "2026-06-29T23:00:00+00:00",
+        "settled_rate_pct": -0.7402,
+        "book_5min_usdt": 2520.06
+      },
+      {
+        "settlement_time": "2026-06-30T00:00:00.001000+00:00",
+        "settled_rate_pct": -0.9307,
+        "book_5min_usdt": 10010.1
+      },
+      {
+        "settlement_time": "2026-06-30T01:00:00+00:00",
+        "settled_rate_pct": -0.7914,
+        "book_5min_usdt": 5985.45
+      },
+      {
+        "settlement_time": "2026-06-30T02:00:00+00:00",
+        "settled_rate_pct": -0.6144,
+        "book_5min_usdt": 6925.98
+      },
+      {
+        "settlement_time": "2026-06-30T03:00:00+00:00",
+        "settled_rate_pct": -0.6116,
+        "book_5min_usdt": 5246.29
+      },
+      {
+        "settlement_time": "2026-06-30T04:00:00.001000+00:00",
+        "settled_rate_pct": -0.6397,
+        "book_5min_usdt": 11392.06
+      },
+      {
+        "settlement_time": "2026-06-30T05:00:00+00:00",
+        "settled_rate_pct": -0.5594,
+        "book_5min_usdt": 4877.26
+      },
+      {
+        "settlement_time": "2026-06-30T06:00:00+00:00",
+        "settled_rate_pct": -0.657,
+        "book_5min_usdt": 1444.93
+      },
+      {
+        "settlement_time": "2026-06-30T07:00:00+00:00",
+        "settled_rate_pct": -0.5736,
+        "book_5min_usdt": 4497.99
+      },
+      {
+        "settlement_time": "2026-06-30T08:00:00+00:00",
+        "settled_rate_pct": -0.8541,
+        "book_5min_usdt": 914.46
+      },
+      {
+        "settlement_time": "2026-06-30T09:00:00+00:00",
+        "settled_rate_pct": -0.9384,
+        "book_5min_usdt": 1200.96
+      },
+      {
+        "settlement_time": "2026-06-30T10:00:00.001000+00:00",
+        "settled_rate_pct": -0.9778,
+        "book_5min_usdt": 8878.99
+      },
+      {
+        "settlement_time": "2026-06-30T11:00:00+00:00",
+        "settled_rate_pct": -0.6954,
+        "book_5min_usdt": 6388.22
+      },
+      {
+        "settlement_time": "2026-06-30T12:00:00+00:00",
+        "settled_rate_pct": -0.3176,
+        "book_5min_usdt": 2669.36
+      },
+      {
+        "settlement_time": "2026-06-30T17:00:00+00:00",
+        "settled_rate_pct": -0.3212,
+        "book_5min_usdt": 5310.75
+      },
+      {
+        "settlement_time": "2026-06-30T18:00:00.006000+00:00",
+        "settled_rate_pct": -0.4017,
+        "book_5min_usdt": 2019.28
+      },
+      {
+        "settlement_time": "2026-06-30T19:00:00+00:00",
+        "settled_rate_pct": -0.726,
+        "book_5min_usdt": 4784.07
+      },
+      {
+        "settlement_time": "2026-06-30T20:00:00.001000+00:00",
+        "settled_rate_pct": -0.7413,
+        "book_5min_usdt": 7442.1
+      },
+      {
+        "settlement_time": "2026-06-30T21:00:00.003000+00:00",
+        "settled_rate_pct": -0.5453,
+        "book_5min_usdt": 5324.59
+      },
+      {
+        "settlement_time": "2026-06-30T22:00:00+00:00",
+        "settled_rate_pct": -0.5625,
+        "book_5min_usdt": 11090.77
+      },
+      {
+        "settlement_time": "2026-06-30T23:00:00+00:00",
+        "settled_rate_pct": -0.4678,
+        "book_5min_usdt": 5964.4
+      },
+      {
+        "settlement_time": "2026-07-01T00:00:00.001000+00:00",
+        "settled_rate_pct": -0.4652,
+        "book_5min_usdt": 6012.45
+      },
+      {
+        "settlement_time": "2026-07-01T01:00:00+00:00",
+        "settled_rate_pct": -0.5616,
+        "book_5min_usdt": 1300.84
+      },
+      {
+        "settlement_time": "2026-07-01T02:00:00+00:00",
+        "settled_rate_pct": -0.5453,
+        "book_5min_usdt": 803.76
+      },
+      {
+        "settlement_time": "2026-07-01T03:00:00.006000+00:00",
+        "settled_rate_pct": -0.4111,
+        "book_5min_usdt": 5415.7
+      },
+      {
+        "settlement_time": "2026-07-01T04:00:00+00:00",
+        "settled_rate_pct": -0.3966,
+        "book_5min_usdt": 538.7
+      },
+      {
+        "settlement_time": "2026-07-01T05:00:00+00:00",
+        "settled_rate_pct": -0.3323,
+        "book_5min_usdt": 7585.18
+      },
+      {
+        "settlement_time": "2026-07-01T06:00:00+00:00",
+        "settled_rate_pct": -0.5365,
+        "book_5min_usdt": 3679.57
+      },
+      {
+        "settlement_time": "2026-07-01T07:00:00.007000+00:00",
+        "settled_rate_pct": -0.31,
+        "book_5min_usdt": 5297.38
+      },
+      {
+        "settlement_time": "2026-07-01T09:00:00+00:00",
+        "settled_rate_pct": -0.2504,
+        "book_5min_usdt": 5959.26
+      },
+      {
+        "settlement_time": "2026-07-01T10:00:00+00:00",
+        "settled_rate_pct": -0.2452,
+        "book_5min_usdt": 4214.46
+      },
+      {
+        "settlement_time": "2026-07-02T17:00:00+00:00",
+        "settled_rate_pct": -0.307,
+        "book_5min_usdt": 2114.77
+      },
+      {
+        "settlement_time": "2026-07-02T18:00:00+00:00",
+        "settled_rate_pct": -0.3126,
+        "book_5min_usdt": 1207.85
+      },
+      {
+        "settlement_time": "2026-07-02T19:00:00.001000+00:00",
+        "settled_rate_pct": -0.3305,
+        "book_5min_usdt": 903.77
+      },
+      {
+        "settlement_time": "2026-07-02T20:00:00+00:00",
+        "settled_rate_pct": -0.4401,
+        "book_5min_usdt": 5014.62
+      },
+      {
+        "settlement_time": "2026-07-02T21:00:00+00:00",
+        "settled_rate_pct": -0.7132,
+        "book_5min_usdt": 3950.58
+      },
+      {
+        "settlement_time": "2026-07-02T22:00:00.001000+00:00",
+        "settled_rate_pct": -0.788,
+        "book_5min_usdt": 4691.43
+      },
+      {
+        "settlement_time": "2026-07-02T23:00:00.002000+00:00",
+        "settled_rate_pct": -0.553,
+        "book_5min_usdt": 6730.97
+      },
+      {
+        "settlement_time": "2026-07-03T00:00:00+00:00",
+        "settled_rate_pct": -0.528,
+        "book_5min_usdt": 4283.27
+      },
+      {
+        "settlement_time": "2026-07-03T01:00:00+00:00",
+        "settled_rate_pct": -0.9681,
+        "book_5min_usdt": 6015.99
+      },
+      {
+        "settlement_time": "2026-07-03T02:00:00+00:00",
+        "settled_rate_pct": -1.1039,
+        "book_5min_usdt": 889.74
+      },
+      {
+        "settlement_time": "2026-07-03T03:00:00.002000+00:00",
+        "settled_rate_pct": -0.9712,
+        "book_5min_usdt": 6260.51
+      },
+      {
+        "settlement_time": "2026-07-03T04:00:00+00:00",
+        "settled_rate_pct": -0.7153,
+        "book_5min_usdt": 9220.44
+      },
+      {
+        "settlement_time": "2026-07-03T05:00:00+00:00",
+        "settled_rate_pct": -0.728,
+        "book_5min_usdt": 7111.38
+      },
+      {
+        "settlement_time": "2026-07-03T06:00:00.002000+00:00",
+        "settled_rate_pct": -0.7835,
+        "book_5min_usdt": 4111.44
+      },
+      {
+        "settlement_time": "2026-07-03T07:00:00+00:00",
+        "settled_rate_pct": -0.5311,
+        "book_5min_usdt": 5905.96
+      },
+      {
+        "settlement_time": "2026-07-03T08:00:00.001000+00:00",
+        "settled_rate_pct": -0.2899,
+        "book_5min_usdt": 4526.01
+      },
+      {
+        "settlement_time": "2026-07-03T11:00:00+00:00",
+        "settled_rate_pct": -0.2524,
+        "book_5min_usdt": 4600.36
+      }
+    ],
+    "HUSDT": [
+      {
+        "settlement_time": "2026-06-22T12:00:00.001000+00:00",
+        "settled_rate_pct": -0.4043,
+        "book_5min_usdt": 381.72
+      },
+      {
+        "settlement_time": "2026-06-22T13:00:00+00:00",
+        "settled_rate_pct": -0.2408,
+        "book_5min_usdt": 289.79
+      }
+    ],
+    "BIRBUSDT": [
+      {
+        "settlement_time": "2026-07-03T03:00:00.002000+00:00",
+        "settled_rate_pct": -0.2719,
+        "book_5min_usdt": 1498.49
+      },
+      {
+        "settlement_time": "2026-07-03T04:00:00+00:00",
+        "settled_rate_pct": -0.2426,
+        "book_5min_usdt": 3487.67
+      }
+    ]
+  },
+  "baselines": {
+    "TAIKOUSDT": 783.44,
+    "LABUSDT": 5614.58,
+    "HUSDT": 1179.27,
+    "BIRBUSDT": 1797.86
+  }
+}
