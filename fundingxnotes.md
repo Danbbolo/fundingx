@@ -38,8 +38,8 @@ Started: July 6, 2026
 
 ## Progress Checklist
 - [x] Step 1: Fees → threshold ✅ (2026-07-06)
-- [ ] Step 2: Scan all pairs
-- [ ] Step 3: Book test on top candidates
+- [x] Step 2: Scan all pairs ✅ (2026-07-06)
+- [x] Step 3: Book test on top candidates ✅ (2026-07-06)
 - [ ] Step 4: Predictability check
 - [ ] Step 5: €50 manual live test
 
@@ -78,6 +78,22 @@ Started: July 6, 2026
 - All top coins are 1h interval
 - BTC/ETH/SOL/DOGE = 0 qualifying (majors have tiny funding)
 - 0.24% threshold filters out ~85% of all coins
+
+### Step 3 — Book Test (2026-07-06)
+Tested: COAIUSDT, LABUSDT, PIPPINUSDT, HUSDT, BEATUSDT
+
+| Symbol | Book_USDT (smaller side) | Spread% | Notes |
+|--------|-------------------------|---------|-------|
+| PIPPINUSDT | 21,377 | 0.21% | Best depth |
+| BEATUSDT | 2,578 | 0.09% | Tight spread |
+| LABUSDT | 2,348 | 0.03% | Tightest spread |
+| COAIUSDT | 1,880 | 0.48% | ⚠️ Wide spread, huge bid/ask imbalance |
+| HUSDT | 811 | 0.14% | ⚠️ Too thin for €500 |
+
+- Raw top 5 levels printed for COAIUSDT (verified)
+- COAIUSDT: 21k bid vs 1.8k ask — massive imbalance, wide spread
+- HUSDT: only 811 USDT depth — too thin
+- No pass/fail yet — need leverage info from UI to set order size
 
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
