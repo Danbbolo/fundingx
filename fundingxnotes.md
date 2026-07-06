@@ -261,5 +261,34 @@ Previous backtest had direction backwards!
 - Price P&L is ~58% of total profit — this isn't just a funding play, price moves matter
 - Smaller size still better per-trade (less slippage)
 - **Recommended coins: LABUSDT, TAIKOUSDT, GUAUSDT**
+
+### Backtest v2 Post-Hoc Analysis (2026-07-06)
+
+**Check 1 — Distribution:**
+| Coin | N | Median | Worst | Best | Win% | MaxLoseStreak | OutlierDep% |
+|------|---|--------|-------|------|------|---------------|-------------|
+| LABUSDT | 246 | +€12.71 | -€314 | +€447 | 64.2% | 88 | 17.9% |
+| TAIKOUSDT | 46 | -€12.91 | -€382 | +€2,814 | 30.4% | 32 | 145.7% |
+| HUSDT | 4 | -€5.87 | -€55 | +€14 | 25% | 3 | — |
+| BIRBUSDT | 4 | -€17.02 | -€62 | -€15 | 0% | 4 | — |
+
+- Top 5 trades = 66.2% of total profit → **heavily outlier-dependent**
+- TAIKOUSDT: 145.7% outlier dependency — one +€2,804 trade carries everything
+- LABUSDT: 88-trade losing streak in a row — psychologically brutal
+- Win rate: LABUSDT 64%, TAIKOUSDT 30% — TAIKOUSDT is a lottery ticket
+
+**Check 2 — Price P&L shape:**
+- Mean: +€24.85 | Median: -€0.86 | Std: €210
+- 48.7% positive, 51.3% negative — nearly coin-flip
+- NOT consistent small gains — it's fat-tailed: a few huge spikes (+€2,804, +€1,407) carry everything
+- Top 5 price P&L trades are all TAIKOUSDT on Jul 1-2 (big price move)
+- **Price P&L is speculative, not mean-reversion**
+
+**Check 3 — Out-of-sample (days 1-7 select, days 8-14 trade):**
+- IS (days 1-7): +€3,979 | OOS (days 8-14): +€2,122 | OOS/IS = 0.53x
+- Only LABUSDT survived the OOS filter (HUSDT qualified days 1-7 but had 0 trades days 8-14)
+- TAIKOUSDT and GUAUSDT only appeared in days 8-14 → would be MISSED in real life
+- OOS still profitable but 47% less than IS → some overfitting present
+- **LABUSDT is the only robust coin** — survives the OOS split
 ## Checkpoint Log
 <!-- Add checkpoints as we progress -->
